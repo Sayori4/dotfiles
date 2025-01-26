@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ $1 == "inc" ]]; then
+  pamixer -i 5
+  VOL=$(pamixer --get-volume)
+  notify-send "Volume Control" "Volume changed to $VOL"
+  
+elif [[ $1 == "dec" ]]; then
+  pamixer -d 5
+  VOL=$(pamixer --get-volume)
+  notify-send "Volume Control" "Volume changed to $VOL"
+
+fi

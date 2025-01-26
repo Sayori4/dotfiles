@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+CONFIG="$HOME/.config/alacritty/alacritty.toml"
+
+if [ "$1" == "-cd" ]; then
+  alacritty --config-file "$CONFIG" --working-directory $2
+else
+  alacritty --config-file "$CONFIG"
+fi

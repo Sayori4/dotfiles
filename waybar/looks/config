@@ -1,0 +1,56 @@
+{
+    "layer": "top",
+    "height": 34,
+    "margin-top": 12,
+    "margin-left": 12,
+    "margin-right": 12,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["network", "custom/sep", "wireplumber", "custom/sep", "cpu", "custom/sep", "battery", "custom/sep", "clock"],
+
+  "hyprland/workspaces": {
+    "on-click": "activate"
+  },
+
+  "custom/sep": {
+    "format": "‎",
+	  "tooltip": false
+  },
+  
+  "clock": {
+    "format": "{:%I:%M %p}",
+	  "tooltip": false
+  },
+
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+	  "format-muted": "",
+	  "format-icons": ["", "", ""],
+	  "max-volume": 100,
+	  "scroll-step": 1
+  },
+
+  "network": {
+	  "format": "{ifname}",
+	  "format-wifi": "  {essid}",
+	  "format-ethernet": "󰈀  connected",
+	  "format-disconnected": "󰌙  disconnected",
+	  "tooltip-format": "connected via {ifname}",
+	  "tooltip-format-wifi": "{ipaddr} ({signalStrength}%)",
+	  "tooltip-format-ethernet": "{ipaddr}",
+	  "tooltip-format-disconnected": "{ifname}",
+	  "max-length": 50
+  },
+
+  "cpu": {
+    "format": " {usage}%"    
+  },
+
+  "battery": {
+    "interval": 60,
+	  "format": "{icon} {capacity}%",
+	  "format-icons": [" ", " ", " ", " ", " "]
+  }
+}
+

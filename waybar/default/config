@@ -1,0 +1,39 @@
+{
+    "layer": "top",
+    "height": 30,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["network", "custom/sep", "clock", "custom/sep", "tray"],
+
+    "hyprland/workspaces": {
+        "on-click": "activate"
+    },
+
+    "custom/sep": {
+        "format": "◆",
+        "tooltip": false,
+    },
+
+    "tray": {
+        "icon-size": 19,
+        "spacing": 2
+    },
+
+    "clock": {
+        "format": "<span color='#f7768e'>󰅐 </span>{:%I:%M}",
+        "format-alt": "{:%a, %d. %b  %I:%M %p}",
+        "tooltip": false,
+    },
+
+    "network": {
+      "format": "{ifname}",
+      "format-wifi": "<span color='#7aa2f7'></span> {essid}",
+      "format-ethernet": "<span color='#7aa2f7'>󰈀</span> connected",
+      "format-disconnected": "<span color='#444b6a'>󰌙</span> disconnected",
+      "tooltip-format": "connected via {ifname}",
+      "tooltip-format-wifi": "{ipaddr} ({signalStrength}%)",
+      "tooltip-format-ethernet": "{ipaddr}",
+      "tooltip-format-disconnected": "{ifname}"
+    },
+}

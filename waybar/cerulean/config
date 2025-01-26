@@ -1,0 +1,65 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "margin-top": 12,
+    "margin-bottom": 0,
+    "margin-left": 12,
+    "margin-right": 12,
+
+    "modules-left": ["custom/logo", "custom/sep", "clock"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["wireplumber", "battery", "network"],
+
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "DP-1":     [1,2,3,4,5,6,7,8,9,10],
+      "HDMI-A-1": [1,2,3,4,5,6,7,8,9,10],
+    }
+  },
+
+  "custom/logo": {
+    "format": "󰣇",
+    "tooltip": false,
+  },
+
+  "custom/sep": {
+    "format": "‎",
+	  "tooltip": false
+  },
+  
+  "clock": {
+    "format": "{:%b %d | %I:%M %p}",
+	  "tooltip": false
+  },
+
+  "wireplumber": {
+    "format": "{icon}",
+	  "format-muted": "",
+	  "format-icons": ["", "", ""],
+    "on-click": "pamixer -t",
+	  "max-volume": 100,
+	  "scroll-step": 1
+  },
+
+  "network": {
+	  "format": "{ifname}",
+	  "format-wifi": " ",
+	  "format-ethernet": "󰈀",
+	  "format-disconnected": "󰌙 ",
+	  "tooltip-format": "connected via {ifname}",
+	  "tooltip-format-wifi": "{ipaddr} ({signalStrength}%)",
+	  "tooltip-format-ethernet": "{ipaddr}",
+	  "tooltip-format-disconnected": "{ifname}",
+	  "max-length": 50
+  },
+
+  "battery": {
+    "interval": 60,
+	  "format": "{icon}",
+	  "format-icons": [" ", " ", " ", " ", " "]
+  },
+}
+

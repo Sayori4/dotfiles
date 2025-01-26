@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/.config/hypr/wofi"
+
+wofi --show drun --style "$DIR"/themes/tokyonight/launcher.css --width 512 --insensitive --hide-scroll --no-actions --prompt "Search"

@@ -1,0 +1,132 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "hack nerd font";
+  font-size: 13px;
+}
+
+window#waybar {
+  background: #1e1e2e;
+  color: white;
+  border-radius: 5px;
+}
+
+tooltip {
+	background: #11111b;
+	color: #cdd6f4;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+#workspaces {
+  border-radius: 5px;
+  transition: none;
+  background: transparent;
+}
+
+#workspaces button {
+  transition: none;
+  color: #cdd6f4;
+  background: #1e1e2e;
+  padding: 5px 5px 3px 5px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 2px solid #1e1e2e;
+}
+
+#clock {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#battery {
+  color: #cdd6f4;
+  padding: 5px 10px;
+}
+
+#wireplumber {
+	color: #cdd6f4;
+	padding: 5px 10px;
+  padding-right: 14px;
+}
+#wireplumber.muted {
+	color: #45475a;
+	border-bottom: 2px solid #45475a;
+}
+
+#network {
+	color: #cdd6f4;
+	padding: 5px 10px;
+  padding-right: 14px;
+	border: none
+}
+#network.disconnected {
+	color: #45475a;
+	border-bottom: 2px solid #45475a;
+}
+#network.linked {
+	color: #cdd6f4;
+	border-bottom: 2px solid #7f849c;
+}
+#network.ethernet, #network.wifi {
+	color: #cdd6f4;
+	border-bottom: 2px solid #cba6f7;
+}
+
+.modules-right {
+  background: #1e1e2e;
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+
+#custom-sep {
+  padding: 0px 4px;
+  color: transparent;
+  background: transparent;
+}
+
+#custom-logo{
+  border-radius: 5px;
+  padding: 5px 20px;
+  padding-right: 24px;
+  font-size: 23px;
+  background: #1e1e2e;
+  color: #89b4fa;
+}
+
+#workspaces button.active {
+  color: #cba6f7;
+  border-bottom: 2px solid #cba6f7;
+}
+
+#workspaces button.empty {
+  color: #45475a;
+}
+
+#workspaces button.urgent {
+  color: #f38ba8;
+  border-bottom: 2px solid #cba6f7;
+}
+
+#workspaces button:hover {
+  transition: none;
+  box-shadow: inherit;
+  color: #bac2de;
+  text-shadow: inherit;
+  background: #313244;
+  border-bottom: 2px solid #414868;
+}
+
+#workspaces button:nth-child(1) {
+  border-radius: 5px 0px 0px 5px;
+}
+#workspaces button:nth-last-child(1) {
+  border-radius: 0px 5px 5px 0px;
+}
+#workspaces button:only-child {
+  border-radius: 5px;
+}
+

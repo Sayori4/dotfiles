@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIR="$HOME/.config/hypr/wlogout"
+
+if [[ `pidof wlogout` ]]; then
+  pkill wlogout
+fi
+
+wlogout -l "$DIR/layout" -C "$DIR/style.css" -c 6 -r 6
