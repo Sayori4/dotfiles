@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [[ $1 == "next" ]]; then
+    playerctl -p spotify,brave next
+    notify-send "Player Control" "Playing next song"
+elif [[ $1 == "prev" ]]; then
+    playerctl -p spotify,brave previous
+    notify-send "Player Control" "Playing previous song"
+elif [[ $1 == "play" ]]; then
+    playerctl -p spotify,brave play-pause
+    STATUS=$(playerctl -p spotify,brave status)
+    if [ $STATUS == "Paused" ] || [ $STATUS == "Stopped"]; then
+        notify-send "Player Control" "Started playback"
+    elif [[ $STATUS == "Playing" ]]; then
+        notify-send "Player Control" "Paused playback"
+    fi
+elif [[ $1 == "stop" ]]; then
+    playerctl -p spotify,brave stop
+    notify-send "Player Control" "Stopped playback"
+fi

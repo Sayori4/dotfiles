@@ -1,13 +1,15 @@
 #!/bin/bash
 
 if [[ $1 == "inc" ]]; then
-  pamixer -i 5
-  VOL=$(pamixer --get-volume)
-  notify-send "Volume Control" "Volume changed to $VOL"
-  
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+	VOL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+	notify-send "Volume Control" "$VOL"
 elif [[ $1 == "dec" ]]; then
-  pamixer -d 5
-  VOL=$(pamixer --get-volume)
-  notify-send "Volume Control" "Volume changed to $VOL"
-
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+	VOL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+	notify-send "Volume Control" "$VOL"
+elif [[ $1 == "mute" ]]; then
+	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+	VOL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+	notify-send "Volume Control" "$VOL"
 fi
